@@ -46,5 +46,17 @@
     "featured": true,
     "path": "entries/random-body-variations.md",
     "excerpt": "This rabbit hole started with a tendon. Then I started looking at everything else that is slightly different about my body."
+  },
+  {
+    "slug": "what-it-feels-like-inside-my-head",
+    "title": "What It Feels Like Inside My Head",
+    "subtitle": "Pictures, sounds, spatial thinking, slippery numbers, and the strange experience of noticing how I think",
+    "date": "2026-08-21",
+    "type": "Thought",
+    "collection": "Life / Personal",
+    "tags": ["thinking", "mental imagery", "qualia", "memory", "curiosity"],
+    "featured": true,
+    "path": "entries/what-it-feels-like-inside-my-head.md",
+    "excerpt": "I did not realize for a long time that people could mean very different things when they said they were picturing something."
   }
 ]
