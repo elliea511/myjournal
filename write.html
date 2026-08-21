@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New piece · Ellie's Collection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Literata:opsz,wght@7..72,500;7..72,600;7..72,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="index.html">Ellie's Collection</a><nav><a href="index.html">Archive</a><a href="journal.html">Journal</a><a class="active" href="write.html">New piece</a></nav></header>
+  <main class="capture-shell">
+    <section class="capture-intro"><p class="eyebrow">Capture something</p><h1>What is worth keeping?</h1><p class="hero-note">It can be polished, unfinished, important, ridiculous, academic, sentimental, or completely random.</p></section>
+    <section class="capture-grid">
+      <form class="capture-form" id="pieceForm">
+        <label><span>Title</span><input id="pieceTitle" type="text" placeholder="Give it a name" /></label>
+        <div class="form-row"><label><span>Type</span><select id="pieceType"><option>Thought</option><option>Memory</option><option>Writing</option><option>Learning</option><option>Idea</option><option>Collection</option></select></label><label><span>Collection</span><input id="pieceCollection" type="text" placeholder="Family, Nursing, Books..." /></label></div>
+        <label><span>Tags</span><input id="pieceTags" type="text" placeholder="comma, separated, tags" /></label>
+        <label><span>Subtitle / description</span><input id="pieceSubtitle" type="text" placeholder="Optional one-line context" /></label>
+        <label><span>Content</span><textarea id="pieceBody" class="capture-textarea" placeholder="Start anywhere..."></textarea></label>
+        <div class="actions"><button class="secondary-button" id="previewButton" type="button">Preview article</button><button class="secondary-button" id="downloadButton" type="button">Download Markdown</button><button class="primary-button" id="saveDraftButton" type="button">Save draft</button></div>
+        <p class="save-note" id="captureStatus">Drafts save only on this device. Finished archive pieces live as Markdown files in the GitHub repository.</p>
+      </form>
+      <aside class="capture-sidebar"><p class="section-kicker">How this fits</p><h2>One place, different kinds of things.</h2><p>Use <strong>Thought</strong> for fragments and observations, <strong>Memory</strong> for things you want preserved, <strong>Writing</strong> for essays and finished pieces, <strong>Learning</strong> for school or rabbit holes, <strong>Idea</strong> for things you may build later, and <strong>Collection</strong> for recipes, lists, books, or anything else.</p><p>You do not have to organize perfectly. Tags are allowed to be messy.</p></aside>
+    </section>
+    <section class="preview-panel" id="previewPanel" hidden><p class="section-kicker">Article preview</p><article class="article-page preview-article"><header class="article-header"><div class="piece-meta" id="previewMeta"></div><h1 id="previewTitle"></h1><p class="article-subtitle" id="previewSubtitle"></p><div class="tag-row" id="previewTags"></div></header><div class="article-body" id="previewBody"></div></article></section>
+  </main>
+  <script src="write.js"></script>
+</body>
+</html>

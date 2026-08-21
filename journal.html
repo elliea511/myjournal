@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Journal · Ellie's Collection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Literata:opsz,wght@7..72,600;7..72,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="index.html">Ellie's Collection</a><nav><a href="index.html">Archive</a><a class="active" href="journal.html">Journal</a><a href="write.html">New piece</a></nav></header>
+  <main class="app-shell journal-page">
+    <section class="journal-hero"><div class="hero-copy"><p class="eyebrow" id="todayLabel">Today</p><h1>Journal</h1><p class="hero-note">A scratchpad for thoughts that are still becoming something. Finished pieces can live in the archive as articles.</p></div></section>
+    <section class="workspace" aria-label="Journal editor and entries">
+      <aside class="sidebar"><div class="sidebar-header"><div><p class="section-kicker">Saved on this device</p><h2>Drafts</h2></div><button class="icon-button" id="newEntryButton" type="button">+</button></div><label class="search"><span>Search</span><input id="searchInput" type="search" placeholder="Find a thought..." /></label><div class="entry-list" id="entryList"></div></aside>
+      <section class="editor"><div class="editor-topbar"><div><p class="section-kicker">Current draft</p><input id="titleInput" class="title-input" type="text" placeholder="Give this a title" maxlength="80" /></div><div class="status-pill" id="saveStatus">Ready</div></div><div class="meta-row"><label><span>Date</span><input id="dateInput" type="date" /></label><label><span>Mood</span><select id="moodInput"><option value="calm">Calm</option><option value="grateful">Grateful</option><option value="tender">Tender</option><option value="focused">Focused</option><option value="heavy">Heavy</option><option value="hopeful">Hopeful</option></select></label></div><div class="prompt-strip"><button class="prompt-button active" type="button" data-prompt="What do I want to remember about today?">Remember</button><button class="prompt-button" type="button" data-prompt="What felt heavy, and what helped me carry it?">Release</button><button class="prompt-button" type="button" data-prompt="What am I grateful for right now?">Gratitude</button><button class="prompt-button" type="button" data-prompt="What do I need next?">Next</button></div><label class="prompt-box"><span>Prompt</span><input id="promptInput" type="text" value="What do I want to remember about today?" /></label><label class="body-field"><span>Entry</span><textarea id="bodyInput" placeholder="Start writing here..."></textarea></label><div class="actions"><button id="saveButton" class="primary-button" type="button">Save draft</button><button id="deleteButton" class="secondary-button" type="button">Delete</button></div></section>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
