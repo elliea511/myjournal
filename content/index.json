@@ -10,5 +10,41 @@
     "featured": true,
     "path": "entries/i-wish-you-could-have-met-her.md",
     "excerpt": "I always tell people I wish they could have met my Mawmaw. There is really no good way to explain Barbara to somebody who never knew her."
+  },
+  {
+    "slug": "biscuits-and-gravy",
+    "title": "Biscuits and Gravy",
+    "subtitle": "A childhood kitchen, a comfort food, and the person who made it feel like home",
+    "date": "2026-04-12",
+    "type": "Writing",
+    "collection": "Family",
+    "tags": ["Mawmaw", "family", "childhood", "food", "memory"],
+    "featured": false,
+    "path": "entries/biscuits-and-gravy.md",
+    "excerpt": "Most childhood memories fade without notice. A few, though, stay close enough to reach for without even trying."
+  },
+  {
+    "slug": "my-gumbo",
+    "title": "My Gumbo",
+    "subtitle": "Dark roux, Conecuh sausage, chicken, shrimp, and the version I actually make",
+    "date": "2026-08-06",
+    "type": "Collection",
+    "collection": "Food & Recipes",
+    "tags": ["gumbo", "recipes", "cooking", "Southern food"],
+    "featured": true,
+    "path": "entries/my-gumbo.md",
+    "excerpt": "This is the gumbo I make: dark roux, Conecuh sausage, rotisserie chicken, shrimp, and a lot of patience."
+  },
+  {
+    "slug": "random-body-variations",
+    "title": "Why Do I Have All These Random Body Variations?",
+    "subtitle": "The tendon question that turned into an anatomy rabbit hole",
+    "date": "2026-08-21",
+    "type": "Learning",
+    "collection": "Rabbit Holes",
+    "tags": ["anatomy", "body variations", "palmaris longus", "teeth", "curiosity"],
+    "featured": true,
+    "path": "entries/random-body-variations.md",
+    "excerpt": "This rabbit hole started with a tendon. Then I started looking at everything else that is slightly different about my body."
   }
 ]
