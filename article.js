@@ -5,6 +5,7 @@ const subtitleEl = document.querySelector("#articleSubtitle");
 const metaEl = document.querySelector("#articleMeta");
 const tagsEl = document.querySelector("#articleTags");
 const bodyEl = document.querySelector("#articleBody");
+const articlePage = document.querySelector(".article-page");
 
 loadArticle();
 
@@ -24,9 +25,11 @@ async function loadArticle() {
     metaEl.innerHTML = `<span>${escapeHtml(item.type)}</span><span>·</span><span>${escapeHtml(item.collection)}</span><span>·</span><time>${formatDate(item.date)}</time>`;
     tagsEl.innerHTML = (item.tags || []).map(tag => `<a href="index.html?tag=${encodeURIComponent(tag)}">${escapeHtml(tag)}</a>`).join("");
 
+    const isMawmawPiece = item.slug === "i-wish-you-could-have-met-her";
     const bodyMarkdown = markdown.replace(/^#\s+.*\n+/, "");
-    bodyEl.classList.toggle("memoir-piece", item.slug === "i-wish-you-could-have-met-her");
-    bodyEl.innerHTML = item.slug === "i-wish-you-could-have-met-her"
+    bodyEl.classList.toggle("memoir-piece", isMawmawPiece);
+    articlePage.classList.toggle("centered-memoir", isMawmawPiece);
+    bodyEl.innerHTML = isMawmawPiece
       ? renderMemoirMarkdown(bodyMarkdown)
       : renderMarkdown(bodyMarkdown);
   } catch {

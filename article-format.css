@@ -1,4 +1,7 @@
-.memoir-piece{max-width:680px;font-size:clamp(1.04rem,1.6vw,1.14rem);line-height:1.9}
+.centered-memoir .article-header{text-align:center}
+.centered-memoir .article-header h1,.centered-memoir .article-subtitle{margin-left:auto;margin-right:auto}
+.centered-memoir .article-header .piece-meta,.centered-memoir .article-header .tag-row{justify-content:center}
+.memoir-piece{max-width:680px;font-size:clamp(1.04rem,1.6vw,1.14rem);line-height:1.9;text-align:center}
 .memoir-piece p{margin:0 0 1.65em}
 .memoir-piece .standalone-line{margin:2.15em 0;text-align:center;font-family:"Literata",Georgia,serif;font-size:1.08em;font-weight:600;line-height:1.5;color:#394743}
 .memoir-piece .song-stanza{margin:3em auto;padding:26px 30px;border:0;border-radius:16px;background:rgba(185,104,94,.07);color:#4d5a56;font-style:italic;text-align:center}
