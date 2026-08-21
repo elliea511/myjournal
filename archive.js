@@ -1,4 +1,4 @@
-const state = { items: [], query: "", type: "All", collection: "All", tag: "" };
+const state = { items: [], query: "", type: "All", collection: "All", tag: new URLSearchParams(location.search).get("tag") || "" };
 const search = document.querySelector("#archiveSearch");
 const typeFilters = document.querySelector("#typeFilters");
 const collectionFilters = document.querySelector("#collectionFilters");
@@ -35,6 +35,9 @@ function buildFilters() {
   tagCloud.innerHTML = Object.entries(tags).sort((a,b) => b[1]-a[1]).map(([tag,count]) => `<button class="tag-button" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)} <span>${count}</span></button>`).join("");
   tagCloud.querySelectorAll("button").forEach(button => button.addEventListener("click", () => {
     state.tag = state.tag === button.dataset.tag ? "" : button.dataset.tag;
+    const url = new URL(location.href);
+    state.tag ? url.searchParams.set("tag", state.tag) : url.searchParams.delete("tag");
+    history.replaceState({}, "", url);
     render();
   }));
 }
