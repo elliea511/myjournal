@@ -1,105 +1,54 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Journal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Literata:opsz,wght@7..72,600;7..72,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <main class="app-shell">
-      <section class="journal-hero" aria-label="Journal workspace">
-        <div class="hero-copy">
-          <p class="eyebrow" id="todayLabel">Today</p>
-          <h1>My Journal</h1>
-          <p class="hero-note">A private place to land your thoughts, track your mood, and keep small moments from slipping away.</p>
-        </div>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ellie's personal collection of thoughts, memories, writing, learning, ideas, and things worth keeping." />
+  <title>Ellie's Collection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Literata:opsz,wght@7..72,500;7..72,600;7..72,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Ellie's Collection</a>
+    <nav><a class="active" href="index.html">Archive</a><a href="journal.html">Journal</a><a href="write.html">New piece</a></nav>
+  </header>
 
-      <section class="workspace" aria-label="Journal editor and entries">
-        <aside class="sidebar" aria-label="Entries">
-          <div class="sidebar-header">
-            <div>
-              <p class="section-kicker">Saved locally</p>
-              <h2>Entries</h2>
-            </div>
-            <button class="icon-button" id="newEntryButton" type="button" aria-label="New entry" title="New entry">+</button>
-          </div>
+  <main>
+    <section class="archive-hero">
+      <div>
+        <p class="eyebrow">A personal archive</p>
+        <h1>A website of my brain.</h1>
+        <p class="hero-note">Thoughts, memories, ideas, things I've learned, things I've made, and things I don't want to lose.</p>
+      </div>
+      <div class="hero-actions"><a class="primary-button link-button" href="write.html">Capture something</a><a class="secondary-button link-button" href="journal.html">Open journal</a></div>
+    </section>
 
-          <label class="search">
-            <span>Search</span>
-            <input id="searchInput" type="search" placeholder="Find a thought..." autocomplete="off" />
-          </label>
+    <section class="archive-tools" aria-label="Browse collection">
+      <label class="global-search"><span>Search everything</span><input id="archiveSearch" type="search" placeholder="Mawmaw, anatomy, books, a random thought..." /></label>
+      <div class="filter-groups"><div><p class="section-kicker">Type</p><div class="filter-row" id="typeFilters"></div></div><div><p class="section-kicker">Collection</p><div class="filter-row" id="collectionFilters"></div></div></div>
+    </section>
 
-          <div class="entry-list" id="entryList" aria-live="polite"></div>
-        </aside>
+    <section class="archive-section" id="featuredSection">
+      <div class="section-heading"><div><p class="section-kicker">Start here</p><h2>Featured</h2></div></div>
+      <div class="featured-grid" id="featuredGrid"></div>
+    </section>
 
-        <section class="editor" aria-label="Write journal entry">
-          <div class="editor-topbar">
-            <div>
-              <p class="section-kicker">Current entry</p>
-              <input id="titleInput" class="title-input" type="text" placeholder="Give today a title" maxlength="80" />
-            </div>
-            <div class="status-pill" id="saveStatus">Ready</div>
-          </div>
+    <section class="archive-section">
+      <div class="section-heading"><div><p class="section-kicker">Everything worth keeping</p><h2>All pieces</h2></div><p id="resultCount" class="muted"></p></div>
+      <div class="card-grid" id="archiveGrid"></div>
+      <p class="empty-state" id="archiveEmpty" hidden>Nothing matches that search yet.</p>
+    </section>
 
-          <div class="meta-row">
-            <label>
-              <span>Date</span>
-              <input id="dateInput" type="date" />
-            </label>
-            <label>
-              <span>Mood</span>
-              <select id="moodInput">
-                <option value="calm">Calm</option>
-                <option value="grateful">Grateful</option>
-                <option value="tender">Tender</option>
-                <option value="focused">Focused</option>
-                <option value="heavy">Heavy</option>
-                <option value="hopeful">Hopeful</option>
-              </select>
-            </label>
-          </div>
+    <section class="archive-section topics-section">
+      <div class="section-heading"><div><p class="section-kicker">Connections</p><h2>Topics I keep coming back to</h2></div></div>
+      <div class="tag-cloud" id="tagCloud"></div>
+    </section>
+  </main>
 
-          <div class="prompt-strip">
-            <button class="prompt-button active" type="button" data-prompt="What do I want to remember about today?">
-              Remember
-            </button>
-            <button class="prompt-button" type="button" data-prompt="What felt heavy, and what helped me carry it?">
-              Release
-            </button>
-            <button class="prompt-button" type="button" data-prompt="What am I grateful for right now?">
-              Gratitude
-            </button>
-            <button class="prompt-button" type="button" data-prompt="What do I need next?">
-              Next
-            </button>
-          </div>
-
-          <label class="prompt-box">
-            <span>Prompt</span>
-            <input id="promptInput" type="text" value="What do I want to remember about today?" />
-          </label>
-
-          <label class="body-field">
-            <span>Entry</span>
-            <textarea id="bodyInput" placeholder="Start writing here..."></textarea>
-          </label>
-
-          <div class="actions">
-            <button id="saveButton" class="primary-button" type="button">Save entry</button>
-            <button id="deleteButton" class="secondary-button" type="button">Delete</button>
-          </div>
-        </section>
-      </section>
-    </main>
-
-    <script src="app.js"></script>
-  </body>
+  <footer class="site-footer"><p>This collection can be messy. That is kind of the point.</p></footer>
+  <script src="archive.js"></script>
+</body>
 </html>
