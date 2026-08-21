@@ -1,4 +1,5 @@
 const storageKey = "myjournal.entries";
+const mawmawSeedKey = "myjournal.seeded.mawmaw-v1";
 
 const todayLabel = document.querySelector("#todayLabel");
 const entryList = document.querySelector("#entryList");
@@ -25,6 +26,7 @@ todayLabel.textContent = new Intl.DateTimeFormat("en", {
 
 render();
 loadActiveEntry();
+seedMawmawEntry();
 
 newEntryButton.addEventListener("click", () => {
   activeId = createEntry().id;
@@ -52,6 +54,61 @@ promptButtons.forEach((button) => {
     saveStatus.textContent = "Unsaved";
   });
 });
+
+async function seedMawmawEntry() {
+  if (localStorage.getItem(mawmawSeedKey)) return;
+
+  try {
+    const response = await fetch("entries/i-wish-you-could-have-met-her.md");
+    if (!response.ok) return;
+
+    const markdown = (await response.text()).replaceAll("\r\n", "\n");
+    const lines = markdown.split("\n");
+    const title = (lines.shift() || "I Wish You Could Have Met Her")
+      .replace(/^#\s+/, "")
+      .trim();
+
+    while (lines[0] === "") lines.shift();
+    const body = lines.join("\n").trimEnd();
+
+    const alreadySaved = entries.some(
+      (entry) =>
+        entry.id === "mawmaw-i-wish-you-could-have-met-her" ||
+        entry.title === title,
+    );
+
+    if (!alreadySaved) {
+      const mawmawEntry = {
+        id: "mawmaw-i-wish-you-could-have-met-her",
+        title,
+        date: "2026-08-21",
+        mood: "tender",
+        prompt: "What do I want to remember about today?",
+        body,
+        updatedAt: Date.parse("2026-08-21T06:01:32Z"),
+      };
+
+      if (
+        entries.length === 1 &&
+        !entries[0].title &&
+        !entries[0].body
+      ) {
+        entries[0] = mawmawEntry;
+      } else {
+        entries.unshift(mawmawEntry);
+      }
+
+      activeId = mawmawEntry.id;
+      persist();
+      render();
+      loadActiveEntry();
+    }
+
+    localStorage.setItem(mawmawSeedKey, "1");
+  } catch {
+    // Leave the seed unset so the site can try again on the next load.
+  }
+}
 
 function readEntries() {
   try {
