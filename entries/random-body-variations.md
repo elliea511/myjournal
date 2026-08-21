@@ -9,7 +9,6 @@ Then I started listing the other things I have noticed about myself.
 - My ring finger is longer than my index finger.
 - I have unattached earlobes.
 - I have Darwin’s tubercle on both ears.
-- I can do several of the little inherited-trait/body-variation tests we talked through.
 - I had an extra baby tooth and then an extra adult tooth in the same place on the upper left side, between my incisor and canine. It was slightly smaller than my normal incisor but otherwise looked like a regular tooth.
 
 The tooth is probably the strangest one to me because it happened twice: once in my baby teeth and again when the adult teeth came in.
