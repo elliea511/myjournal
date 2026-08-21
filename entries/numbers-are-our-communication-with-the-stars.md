@@ -53,3 +53,31 @@ I am not saying I have proven astrology because obviously I have not. I do not h
 A birthday visit turned into a conversation about *Wicked*. That turned into thinking about how stories hold meaning. Then I went home, saw a numerology chart, remembered a movie about communicating with aliens through math, and ended up thinking about numbers, stars, astrology, religion, women, and who gets to decide which ways of making sense of the universe are respectable.
 
 What an odd and dysfunctional world we live in.
+
+## What I actually mean by astrology
+
+I do not think astrology is a science, and I do not think a birth chart determines who someone is or what will happen to them. That is not really why I find it interesting.
+
+To me, astrology is a form of spirituality. It is a system that asks you to look inward and outward at the same time. You look at yourself, your relationships, your patterns, your reactions, and your place within something much larger than you. It asks, **how am I a part of this?**
+
+I think there is value in any system that encourages that question.
+
+We spend so much of our lives treating the world as something happening outside of us. Other people are the problem. Society is the problem. Our circumstances are the problem. The universe is this enormous thing somewhere above us that we are observing from a distance. But we are not outside of any of it. We are participants. We affect other people and they affect us. Our environment shapes us and we shape it in return. We are physical objects existing inside a constantly changing and expanding universe.
+
+In that sense, I love the idea that we are the universe experiencing itself over and over again.
+
+That does not mean every pattern we notice is real. Introspection can become overinterpretation. But a lack of awareness can become a lack of interpretation entirely, and I am not convinced that is somehow more intelligent.
+
+That is part of why the way people mock astrology bothers me, especially when that mockery is directed at women. Astrology has become heavily associated with women, and suddenly a system based around examining yourself, your relationships, patterns, ambiguity, and your place in the universe is treated like evidence that you are stupid.
+
+I find that strange.
+
+Women spend so much of their lives being asked, directly and indirectly, to examine themselves. How do I look? How did I sound? Was I too much? Was I not enough? How did that person feel? What did I contribute to that interaction? What could I have done differently? We are constantly taught to interpret ourselves and the people around us.
+
+Of course that hyperawareness can become unhealthy. But the opposite can be unhealthy too. Never asking what role you play in anything does not make you more rational. Sometimes it just makes you less aware.
+
+So no, I do not need astrology to be objectively correct for me to think there is something intellectually valuable about it. I do not need the planets to dictate my personality. I do not need a chart to predict my future.
+
+I just think there is something deeply human about looking at the universe and asking where you fit inside it.
+
+And I think **“How am I a part of this?”** is a more useful question than living your entire life believing everything exists completely outside of you.
