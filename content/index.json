@@ -58,5 +58,17 @@
     "featured": true,
     "path": "entries/what-it-feels-like-inside-my-head.md",
     "excerpt": "I did not realize for a long time that people could mean very different things when they said they were picturing something."
+  },
+  {
+    "slug": "numbers-are-our-communication-with-the-stars",
+    "title": "Numbers Are Our Communication With the Stars",
+    "subtitle": "A conversation about Wicked that somehow became a thought about movies, math, astrology, women, and the universe",
+    "date": "2026-08-21",
+    "type": "Thought",
+    "collection": "Life / Personal",
+    "tags": ["movies", "Wicked", "numbers", "astrology", "women", "meaning", "curiosity"],
+    "featured": true,
+    "path": "entries/numbers-are-our-communication-with-the-stars.md",
+    "excerpt": "Numbers are our communication with the stars. Isn't that beautiful?"
   }
 ]
